@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS co5_assignment5;
+USE co5_assignment5;
+
+CREATE TABLE IF NOT EXISTS bus_pass (
+  pass_id VARCHAR(20) PRIMARY KEY,
+  reg_no VARCHAR(20) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  route_no INT NOT NULL,
+  boarding_stop VARCHAR(100) NOT NULL,
+  validity_date DATE NOT NULL,
+  amount DECIMAL(10,2) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS app_user (
+  user_id VARCHAR(50) PRIMARY KEY,
+  pwd VARCHAR(255) NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS student (
+  student_id INT PRIMARY KEY,
+  register_no VARCHAR(20) NOT NULL UNIQUE,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(120)
+) ENGINE=InnoDB;

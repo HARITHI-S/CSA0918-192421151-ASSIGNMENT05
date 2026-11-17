@@ -1,0 +1,2 @@
+package com.co5.assignment;
+public record Student(int studentId, String registerNo, String name, String email) {}
